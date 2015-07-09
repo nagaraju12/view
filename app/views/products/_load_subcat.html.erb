@@ -1,0 +1,3 @@
+ <div class="field">
+    <%= select_tag :subcategory_id, options_for_select([["Select SubCategory"]] + @subcategories.map {|c| [c.title, c.id]}) %>
+  </div>

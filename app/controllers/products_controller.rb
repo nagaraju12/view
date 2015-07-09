@@ -27,6 +27,15 @@ end
 			render "edit"
 		end
 	end
+	def load_subcat
+  
+  @category = Category.find(params[:category_id])
+
+  @subcategories = @category.subcategories
+  respond_to do |format|
+    format.js
+  end
+end
 	def destroy
 		@product= Product.find(params[:id])
 		@product.destroy

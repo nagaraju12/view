@@ -35,3 +35,10 @@
     <%= f.submit %>
   </div>
 <% end %>
+<script>
+  function select_file(val){
+    $.ajax({
+      url: "/products/load_subcat?category_id=" + val,
+  });
+  }
+  </script>
